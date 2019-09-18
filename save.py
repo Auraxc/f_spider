@@ -1,8 +1,6 @@
 import pymysql
-
+from utils import log
 import config
-
-import csv
 
 
 def _pymysql_connection():
@@ -38,7 +36,7 @@ def SQLsave(fanfou):
         sql_insert = 'INSERT INTO `{}` ({}) VALUES ({});'.format(
             'fanfou', formatted_sql_keys, formatted_sql_values
         )
-        print('save info', fanfou, formatted_sql_keys, formatted_sql_values)
+        log('保存消息', fanfou, formatted_sql_keys, formatted_sql_values)
         values = tuple(fanfou.values())
         with connection.cursor() as cursor:
             cursor.execute(sql_insert, values)
