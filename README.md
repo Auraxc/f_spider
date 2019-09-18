@@ -10,4 +10,3 @@
 
  - 日志功能
 
-   ![饭否爬虫演示](/Users/axr/Desktop/git简介/饭否爬虫演示.gif)
